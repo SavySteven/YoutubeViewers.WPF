@@ -1,4 +1,6 @@
 ﻿using System.Windows.Input;
+using YoutubeViewers.WPF.Commands;
+using YoutubeViewers.WPF.Stores;
 
 namespace YoutubeViewers.WPF.ViewModels
 {
@@ -8,7 +10,7 @@ namespace YoutubeViewers.WPF.ViewModels
 
         public AddYoutubeViewerViewModel(YoutubeViewersStore youTubeViewersStore, ModalNavigationStore modalNavigationStore)
         {
-            ICommand submitCommand = new AddYouTtbeViewerCommand(this, youTubeViewersStore, modalNavigationStore);
+            ICommand submitCommand = new AddYoutubeViewerCommand(this, youTubeViewersStore, modalNavigationStore);
             ICommand cancelCommand = new CloseModalCommand(modalNavigationStore);
             YouTubeViewerDetailsFormViewModel = new YoutubeViewerDetailsFormViewModel(submitCommand, cancelCommand);
         }

@@ -1,10 +1,11 @@
 ﻿using System.Windows.Input;
+using YoutubeViewers.WPF.Models;
 
 namespace YoutubeViewers.WPF.ViewModels
 {
     public class YouTubeViewersListingItemViewModel : ViewModelBase
     {
-        public YouTubeViewer YouTubeViewer { get; private set; }
+        public YoutubeViewer YouTubeViewer { get; private set; }
 
         public string Username => YouTubeViewer.Username;
 
@@ -42,15 +43,15 @@ namespace YoutubeViewers.WPF.ViewModels
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public YouTubeViewersListingItemViewModel(YouTubeViewer youTubeViewer, YouTubeViewersStore youTubeViewersStore, ModalNavigationStore modalNavigationStore)
+        public YouTubeViewersListingItemViewModel(YoutubeViewer youTubeViewer, YouTubeViewersStore youTubeViewersStore, ModalNavigationStore modalNavigationStore)
         {
             YouTubeViewer = youTubeViewer;
 
-            EditCommand = new OpenEditYouTubeViewerCommand(this, youTubeViewersStore, modalNavigationStore);
-            DeleteCommand = new DeleteYouTubeViewerCommand(this, youTubeViewersStore);
+            EditCommand = new OpenEditYoutubeViewerCommand(this, youTubeViewersStore, modalNavigationStore);
+            DeleteCommand = new DeleteYoutubeViewerCommand(this, youTubeViewersStore);
         }
 
-        public void Update(YouTubeViewer youTubeViewer)
+        public void Update(YoutubeViewer youTubeViewer)
         {
             YouTubeViewer = youTubeViewer;
 

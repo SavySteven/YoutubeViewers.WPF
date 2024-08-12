@@ -3,7 +3,7 @@
 
     public class SelectedYouTubeViewerStore
     {
-        private readonly YouTubeViewersStore _youTubeViewersStore;
+        private readonly YoutubeViewersStore _youTubeViewersStore;
 
         private YoutubeViewer _selectedYouTubeViewer;
         public YoutubeViewer SelectedYouTubeViewer
@@ -21,7 +21,7 @@
 
         public event Action SelectedYouTubeViewerChanged;
 
-        public SelectedYouTubeViewerStore(YouTubeViewersStore youTubeViewersStore)
+        public SelectedYouTubeViewerStore(YoutubeViewersStore youTubeViewersStore)
         {
             _youTubeViewersStore = youTubeViewersStore;
 
@@ -29,12 +29,12 @@
             _youTubeViewersStore.YouTubeViewerUpdated += YouTubeViewersStore_YouTubeViewerUpdated;
         }
 
-        private void YouTubeViewersStore_YouTubeViewerAdded(YouTubeViewer youTubeViewer)
+        private void YouTubeViewersStore_YouTubeViewerAdded(YoutubeViewer youTubeViewer)
         {
             SelectedYouTubeViewer = youTubeViewer;
         }
 
-        private void YouTubeViewersStore_YouTubeViewerUpdated(YouTubeViewer youTubeViewer)
+        private void YouTubeViewersStore_YouTubeViewerUpdated(YoutubeViewer youTubeViewer)
         {
             if (youTubeViewer.Id == SelectedYouTubeViewer?.Id)
             {

@@ -42,9 +42,9 @@ namespace YoutubeViewers.WPF
         {
             _host.Start();
 
-            YouTubeViewersDbContextFactory youTubeViewersDbContextFactory =
-                _host.Services.GetRequiredService<YouTubeViewersDbContextFactory>();
-            using (YouTubeViewersDbContext context = youTubeViewersDbContextFactory.Create())
+            YoutubeViewersDbContextFactory youTubeViewersDbContextFactory =
+                _host.Services.GetRequiredService<YoutubeViewersDbContextFactory>();
+            using (YoutubeViewersDbContext context = youTubeViewersDbContextFactory.Create())
             {
                 context.Database.Migrate();
             }

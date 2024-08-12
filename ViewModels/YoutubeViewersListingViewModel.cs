@@ -1,11 +1,13 @@
 ﻿using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using YoutubeViewers.WPF.Models;
+using YoutubeViewers.WPF.Stores;
 
 namespace YoutubeViewers.WPF.ViewModels
 {
     public class YouTubeViewersListingViewModel : ViewModelBase
     {
-        private readonly YouTubeViewersStore _youTubeViewersStore;
+        private readonly YoutubeViewersStore _youTubeViewersStore;
         private readonly SelectedYouTubeViewerStore _selectedYouTubeViewerStore;
         private readonly ModalNavigationStore _modalNavigationStore;
 
