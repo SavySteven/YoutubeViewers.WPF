@@ -104,11 +104,11 @@
                         <ColumnDefinition Width="2*" />
                     </Grid.ColumnDefinitions>
 
-                    <components:YouTubeViewersListing
+                    <components:YoutubeViewersListing
                         Grid.Column="0" 
                         DataContext="{Binding YouTubeViewersListingViewModel}" />
 
-                    <components:YouTubeViewersDetails
+                    <components:YoutubeViewersDetails
                         Grid.Column="1"
                         Margin="20,0,0,0"
                         DataContext="{Binding YouTubeViewersDetailsViewModel}" />
