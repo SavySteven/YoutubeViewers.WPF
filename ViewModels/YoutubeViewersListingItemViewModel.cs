@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using YoutubeViewers.WPF.Commands;
 using YoutubeViewers.WPF.Models;
 
 namespace YoutubeViewers.WPF.ViewModels
@@ -43,7 +44,7 @@ namespace YoutubeViewers.WPF.ViewModels
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public YouTubeViewersListingItemViewModel(YoutubeViewer youTubeViewer, YouTubeViewersStore youTubeViewersStore, ModalNavigationStore modalNavigationStore)
+        public YouTubeViewersListingItemViewModel(YoutubeViewer youTubeViewer, YoutubeViewersStore youTubeViewersStore, ModalNavigationStore modalNavigationStore)
         {
             YouTubeViewer = youTubeViewer;
 
