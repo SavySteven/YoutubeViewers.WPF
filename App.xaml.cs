@@ -24,7 +24,7 @@ namespace YoutubeViewers.WPF
                     services.AddSingleton<IDeleteYouTubeViewerCommand, DeleteYouTubeViewerCommand>();
 
                     services.AddSingleton<ModalNavigationStore>();
-                    services.AddSingleton<YouTubeViewersStore>();
+                    services.AddSingleton<YoutubeViewersStore>();
                     services.AddSingleton<SelectedYouTubeViewerStore>();
 
                     services.AddTransient<YouTubeViewersViewModel>(CreateYouTubeViewersViewModel);
