@@ -1,4 +1,4 @@
-﻿using YoutubeViewers.WPF.Models;
+﻿using YoutubeViewers.Domain.Models;
 using YoutubeViewers.WPF.Stores;
 using YoutubeViewers.WPF.ViewModels;
 

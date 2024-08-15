@@ -1,4 +1,6 @@
-﻿namespace YoutubeViewers.WPF.Models
+﻿using YoutubeViewers.WPF.Stores;
+
+namespace YoutubeViewers.Domain.Models
 {
 
     public class SelectedYouTubeViewerStore

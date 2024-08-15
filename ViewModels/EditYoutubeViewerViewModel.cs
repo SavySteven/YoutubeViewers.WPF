@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 using YoutubeViewers.WPF.Commands;
-using YoutubeViewers.WPF.Models;
+using YoutubeViewers.Domain.Models;
 using YoutubeViewers.WPF.Stores;
 
 namespace YoutubeViewers.WPF.ViewModels

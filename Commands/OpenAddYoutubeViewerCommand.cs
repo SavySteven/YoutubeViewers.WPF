@@ -5,7 +5,7 @@ namespace YoutubeViewers.WPF.Commands
 {
     public class OpenAddYoutubeViewerCommand : CommandBase
     {
-        private readonly YouTubeViewersStore _youTubeViewersStore;
+        private readonly YoutubeViewersStore _youTubeViewersStore;
         private readonly ModalNavigationStore _modalNavigationStore;
 
         public OpenAddYoutubeViewerCommand(YoutubeViewersStore youTubeViewersStore, ModalNavigationStore modalNavigationStore)
