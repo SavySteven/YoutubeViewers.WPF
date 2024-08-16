@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using YoutubeViewers.Domain.Models;
+using YoutubeViewers.WPF.Commands;
 using YoutubeViewers.WPF.Stores;
 
 namespace YoutubeViewers.WPF.ViewModels
@@ -47,10 +48,10 @@ namespace YoutubeViewers.WPF.ViewModels
 
         public YouTubeViewersViewModel(YoutubeViewersStore youTubeViewersStore, SelectedYouTubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
         {
-            YoutubeViewersListingViewModel = new YouTubeViewersListingViewModel(youTubeViewersStore, selectedYouTubeViewerStore, modalNavigationStore);
-            YoutubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
+            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(youTubeViewersStore, selectedYouTubeViewerStore, modalNavigationStore);
+            YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
 
-            LoadYouTubeViewersCommand = new LoadYoutubeViewersCommand(this, youTubeViewersStore);
+            LoadYouTubeViewersCommand = new LoadYouTubeViewersCommand(this, youTubeViewersStore);
             AddYouTubeViewersCommand = new OpenAddYoutubeViewerCommand(youTubeViewersStore, modalNavigationStore);
         }
 
