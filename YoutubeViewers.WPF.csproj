@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YoutubeViewers.Domain\YoutubeViewers.Domain.csproj" />
+    <ProjectReference Include="..\YoutubeViewers.EntityFramework\YoutubeViewers.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

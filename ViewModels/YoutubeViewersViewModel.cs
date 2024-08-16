@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using YoutubeViewers.Domain.Models;
 using YoutubeViewers.WPF.Stores;
 
 namespace YoutubeViewers.WPF.ViewModels
@@ -6,7 +7,7 @@ namespace YoutubeViewers.WPF.ViewModels
     public class YouTubeViewersViewModel : ViewModelBase
     {
 
-        public YouTubeViewersListingItemViewModel YouTubeViewersListingItemViewModel { get; }
+        public YouTubeViewersListingItemViewModel YoutubeViewersListingItemViewModel { get; }
         public YoutubeViewerDetailsFormViewModel YoutubeViewerDetailsFormViewModel { get; }
 
 
@@ -44,16 +45,16 @@ namespace YoutubeViewers.WPF.ViewModels
         public ICommand LoadYouTubeViewersCommand { get; }
         public ICommand AddYouTubeViewersCommand { get; }
 
-        public YouTubeViewersViewModel(YoutubeViewersStore youTubeViewersStore, SelectedYoutubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
+        public YouTubeViewersViewModel(YoutubeViewersStore youTubeViewersStore, SelectedYouTubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
         {
-            YoutubeViewersListingViewModel = new YoutubeViewersListingViewModel(youTubeViewersStore, selectedYouTubeViewerStore, modalNavigationStore);
-            YoutubeViewersDetailsViewModel = new YoutubeViewersDetailsViewModel(selectedYouTubeViewerStore);
+            YoutubeViewersListingViewModel = new YouTubeViewersListingViewModel(youTubeViewersStore, selectedYouTubeViewerStore, modalNavigationStore);
+            YoutubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
 
             LoadYouTubeViewersCommand = new LoadYoutubeViewersCommand(this, youTubeViewersStore);
             AddYouTubeViewersCommand = new OpenAddYoutubeViewerCommand(youTubeViewersStore, modalNavigationStore);
         }
 
-        public static YouTubeViewersViewModel LoadViewModel(YoutubeViewersStore youTubeViewersStore, SelectedYoutubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
+        public static YouTubeViewersViewModel LoadViewModel(YoutubeViewersStore youTubeViewersStore, SelectedYouTubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
         {
             YouTubeViewersViewModel viewModel = new YouTubeViewersViewModel(youTubeViewersStore, selectedYouTubeViewerStore, modalNavigationStore);
 

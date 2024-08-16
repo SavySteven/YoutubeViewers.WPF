@@ -1,13 +1,15 @@
-﻿using YoutubeViewers.Domain.Models;
+﻿using YoutubeViewers.Domain.Commands;
+using YoutubeViewers.Domain.Models;
+using YoutubeViewers.Domain.Queries;
 
 namespace YoutubeViewers.WPF.Stores
 {
     public class YoutubeViewersStore
     {
-        private readonly IGetAllYoutubeViewersQuery _getAllYouTubeViewersQuery;
-        private readonly ICreateYoutubeViewerCommand _createYouTubeViewerCommand;
-        private readonly IUpdateYoutubeViewerCommand _updateYouTubeViewerCommand;
-        private readonly IDeleteYoutubeViewerCommand _deleteYouTubeViewerCommand;
+        private readonly IGetAllYouTubeViewersQuery _getAllYouTubeViewersQuery;
+        private readonly ICreateYouTubeViewerCommand _createYouTubeViewerCommand;
+        private readonly IUpdateYouTubeViewerCommand _updateYouTubeViewerCommand;
+        private readonly IDeleteYouTubeViewerCommand _deleteYouTubeViewerCommand;
 
         private readonly List<YoutubeViewer> _youTubeViewers;
         public IEnumerable<YoutubeViewer> YouTubeViewers => _youTubeViewers;
@@ -17,10 +19,10 @@ namespace YoutubeViewers.WPF.Stores
         public event Action<YoutubeViewer> YouTubeViewerUpdated;
         public event Action<Guid> YouTubeViewerDeleted;
 
-        public YouTubeViewersStore(IGetAllYoutubeViewersQuery getAllYouTubeViewersQuery,
-            ICreateYoutubeViewerCommand createYouTubeViewerCommand,
-            IUpdateYoutubeViewerCommand updateYouTubeViewerCommand,
-            IDeleteYoutubeViewerCommand deleteYouTubeViewerCommand)
+        public YoutubeViewersStore(IGetAllYouTubeViewersQuery getAllYouTubeViewersQuery,
+            ICreateYouTubeViewerCommand createYouTubeViewerCommand,
+            IUpdateYouTubeViewerCommand updateYouTubeViewerCommand,
+            IDeleteYouTubeViewerCommand deleteYouTubeViewerCommand)
         {
             _getAllYouTubeViewersQuery = getAllYouTubeViewersQuery;
             _createYouTubeViewerCommand = createYouTubeViewerCommand;
