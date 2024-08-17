@@ -8,8 +8,8 @@ namespace YoutubeViewers.WPF.ViewModels
     public class YouTubeViewersViewModel : ViewModelBase
     {
 
-        public YouTubeViewersListingItemViewModel YoutubeViewersListingItemViewModel { get; }
-        public YoutubeViewerDetailsFormViewModel YoutubeViewerDetailsFormViewModel { get; }
+        public YouTubeViewersListingItemViewModel YouTubeViewersListingItemViewModel { get; }
+        public YouTubeViewersDetailsViewModel YouTubeViewersDetailsViewModel { get; }
 
 
         private bool _isLoading;
@@ -48,7 +48,7 @@ namespace YoutubeViewers.WPF.ViewModels
 
         public YouTubeViewersViewModel(YoutubeViewersStore youTubeViewersStore, SelectedYouTubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
         {
-            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(youTubeViewersStore, selectedYouTubeViewerStore, modalNavigationStore);
+            YouTubeViewersListingItemViewModel = new YouTubeViewersListingViewModel(youTubeViewersStore, selectedYouTubeViewerStore, modalNavigationStore);
             YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
 
             LoadYouTubeViewersCommand = new LoadYouTubeViewersCommand(this, youTubeViewersStore);

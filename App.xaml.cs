@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using Microsoft.Extensions.Hosting;
+using System.Windows;
 using YoutubeViewers.Domain.Models;
+using YoutubeViewers.Domain.Queries;
+using YoutubeViewers.EntityFramework.Queries;
 using YoutubeViewers.WPF.Stores;
 using YoutubeViewers.WPF.ViewModels;
 

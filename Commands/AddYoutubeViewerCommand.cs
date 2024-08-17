@@ -23,7 +23,7 @@ namespace YoutubeViewers.WPF.Commands
             formViewModel.ErrorMessage = null;
             formViewModel.IsSubmitting = true;
 
-            YoutubeViewer youTubeViewer = new YouTubeViewer(
+            YoutubeViewer youTubeViewer = new YoutubeViewer(
                 Guid.NewGuid(),
                 formViewModel.Username,
                 formViewModel.IsSubscribed,
